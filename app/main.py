@@ -37,12 +37,13 @@ promp_mid = "\n\n客户诉求是："
 promp_after = "\n你是一个导购机器人，请根据客户诉求向他推荐这款产品"
 print('start complete:')
 
+
 @api.get("/hello")
 async def hello():
     return 'hello world!'
 
 
-@api.get("/chat")
+@api.get("/api/chat")
 async def chat(demand: str = ''):
     query_embedding = embedder.encode(demand, convert_to_tensor=True)
     cos_scores = util.cos_sim(query_embedding, info_embeddings)[0]

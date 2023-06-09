@@ -3,7 +3,7 @@
 ## 后端服务
 该项目基于**fastapi**框架开发
 
-[服务端代码](./app/main.py)
+[服务端代码](main.py)
 
 ## 研发过程
 [数据预处理](./preprocess.ipynb)
